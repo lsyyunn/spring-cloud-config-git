@@ -1,5 +1,5 @@
 server:
-  port: 8000  #eureka注册中心服务器端口为8001
+  port: 8002
 
 spring:
   application:
@@ -8,11 +8,11 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/chouxin/spring-cloud-config-repo/    #项目名称
-          search-paths: config-repo         #资源文件 文件夹
-          username: 342175867@qq.com
-          password: xxxx
+          uri: https://github.com/lsyyunn/spring-cloud-config-repo/
+          username: 2540400974@qq.com
+          password: Abc377544
+          search-paths: config-repo
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8001/eureka/
+      defaultZone: http://localhost:9000/eureka
