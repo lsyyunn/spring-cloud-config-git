@@ -3,7 +3,7 @@ spring:
     config:
       name: cn-qx-config
       profile: dev
-      uri: http://localhost:9000/
+      uri: http://localhost:8002/ #读取server端配置文件
       label: master
 server:
   port: 8001
