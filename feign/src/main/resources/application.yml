@@ -1,0 +1,15 @@
+server:
+  port: 8003
+spring:
+  application:
+    name: feign-git
+  cloud:
+    consul:
+      discovery:
+        host: localhost
+        port: 8500
+        instance-id: ${spring.cloud.consul.discovery.host}:${server.port}
+        register: false
+feign:
+  circuitbreaker:
+    enabled: true

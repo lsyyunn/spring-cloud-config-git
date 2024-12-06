@@ -7,6 +7,7 @@ spring:
   cloud:
     config:
       server:
+#        仓库读取地址
         git:
           uri: https://github.com/lsyyunn/spring-cloud-config-repo/
           username: 2540400974@qq.com
@@ -16,3 +17,17 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:9000/eureka
+#暴露端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+info:
+  contact:
+    email: 2540400974@qq.com
+    phone: 123456789

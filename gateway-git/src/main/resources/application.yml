@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    gateway:
+      routes:
+        - id: service1
+          uri: https://blog.csdn.net
+          predicates:
+            - Path=/csdn
+        - id: config-client
+          uri: lb://config-client-git
+          predicates:
+            - Path=/hello/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka
